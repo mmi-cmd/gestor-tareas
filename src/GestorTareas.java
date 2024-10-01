@@ -18,7 +18,7 @@ public class GestorTareas {
                 int opcion = sc.nextInt();
             sc.nextLine(); 
 
-            if (opcion == 1 && numTareas < 100) {
+            if (opcion == 1 && numTareas < MAXIMA_CANTIDAD_TAREAS) {
                 System.out.print("Ingrese la tarea: ");
                 tareas[numTareas] = sc.nextLine();
                 System.out.print("Ingrese la prioridad (1-5): ");
