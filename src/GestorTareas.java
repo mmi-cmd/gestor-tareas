@@ -2,18 +2,20 @@ import java.util.Scanner;
 
 public class GestorTareas {
     public static void main(String[] args) {
-        String[] tareas = new String[100];
-        int[] prioridades = new int[100];
+        final int MAXIMA_CANTIDAD_TAREAS = 100; //Se agrega constante para evitar numeros magicos
+        String[] tareas = new String[MAXIMA_CANTIDAD_TAREAS];
+        int[] prioridades = new int[MAXIMA_CANTIDAD_TAREAS];
         int numTareas = 0;
         Scanner sc = new Scanner(System.in);
 
         while (true) {
+
             System.out.println("\n1. Agregar tarea");
-            System.out.println("2. Mostrar tareas");
-            System.out.println("3. Completar tarea de mayor prioridad");
-            System.out.println("4. Salir");
-            System.out.print("Seleccione una opción: ");
-            int opcion = sc.nextInt();
+                System.out.println("2. Mostrar tareas");
+                System.out.println("3. Completar tarea de mayor prioridad");
+                System.out.println("4. Salir");
+                System.out.print("Seleccione una opción: ");
+                int opcion = sc.nextInt();
             sc.nextLine(); 
 
             if (opcion == 1 && numTareas < 100) {
